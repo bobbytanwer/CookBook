@@ -1,3 +1,30 @@
-<p>
-  cook works!
-</p>
+<!-- <button (click)="getCook()">Get Cook</button> -->
+<input #cookSearch type="text">
+<button (click)="getOneCook(cookSearch.value)">Get one Cook</button>
+<div class="panel">
+ 
+</div>
+
+<div class="panel" *ngFor="let cook of cooks">
+    
+    {{cook.id}}<h3> Cook :</h3> {{cook.name}}
+    <p>Thank you for visiting my Recipe.
+      If you wish to see me cook. Please click on my
+      cooking channel below.
+    </p>
+    <a href="{{cook.youtubechannel}}"> Cooking Channel </a>
+</div>
+
+ <!--<ul>
+  <li *ngIf="cook.length > 0; then cookname else noCookname">
+  
+  </li>
+
+</ul>
+<ng-template #cookname>
+  list of cooks
+
+</ng-template>
+<ng-template #noCookname>
+    no Cooks found
+  </ng-template> -->

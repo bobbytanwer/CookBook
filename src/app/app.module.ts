@@ -1,3 +1,5 @@
+import { RecipeService } from './services/recipe.service';
+import { CookService } from './services/cook.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
@@ -36,7 +38,7 @@ import { LoginComponent } from './components/login/login.component';
       {path: '**', component: NotfoundcomponentComponent}
     ])
   ],
-  providers: [],
+  providers: [CookService, RecipeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
